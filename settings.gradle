@@ -1,0 +1,8 @@
+pluginManagement {
+    repositories {
+        maven {
+            url 'https://projects.itemis.de/nexus/content/repositories/mbeddr'
+        }
+        gradlePluginPortal()
+    }
+}

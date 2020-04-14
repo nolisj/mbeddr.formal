@@ -14,6 +14,7 @@ plugins {
     id 'base'
     id 'maven-publish'
     id 'co.riiid.gradle' version '0.4.2'
+    id 'generate-models' version '1.4.210.ccbb368'
 }
 
 
@@ -198,11 +199,13 @@ task setup {
     description 'Set up MPS project libraries. Libraries are read in from projectlibraries.properties file.'
 }
 
-task build_allScripts(type: BuildLanguages, dependsOn: [resolveMps, resolveLanguageLibs]) {
-    script "$buildDir/scripts/build_all_scripts.xml"
+generate {
+    projectLocation = file('code/languages/com.mbeddr.formal.nusmv')
+    mpsConfig = configurations.mps
+    models = ['com.mbeddr.formal.nusmv.build']
 }
 
-task build_smv_languages(type: BuildLanguages, dependsOn: [build_allScripts]) {
+task build_smv_languages(type: BuildLanguages, dependsOn: ['generate']) {
     script new File("$buildDir/scripts/build-nusmv-languages.xml")
 }
 
