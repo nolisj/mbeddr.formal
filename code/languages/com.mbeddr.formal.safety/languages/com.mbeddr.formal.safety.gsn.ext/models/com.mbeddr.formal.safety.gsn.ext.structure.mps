@@ -8,6 +8,8 @@
   </languages>
   <imports>
     <import index="py52" ref="r:14bd9e1a-63cf-4fde-816f-1d68e4acbfba(com.mbeddr.formal.safety.gsn.structure)" />
+    <import index="87nw" ref="r:ca2ab6bb-f6e7-4c0f-a88c-b78b9b31fff3(de.slisson.mps.richtext.structure)" />
+    <import index="g35p" ref="r:53f7c624-e35c-46e0-a6cd-4bcccc2b91f5(com.mbeddr.formal.safety.gsn.editor)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
@@ -36,7 +38,9 @@
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
         <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
       </concept>
-      <concept id="1169125989551" name="jetbrains.mps.lang.structure.structure.InterfaceConceptDeclaration" flags="ig" index="PlHQZ" />
+      <concept id="1169125989551" name="jetbrains.mps.lang.structure.structure.InterfaceConceptDeclaration" flags="ig" index="PlHQZ">
+        <child id="1169127546356" name="extends" index="PrDN$" />
+      </concept>
       <concept id="1169127622168" name="jetbrains.mps.lang.structure.structure.InterfaceConceptReference" flags="ig" index="PrWs8">
         <reference id="1169127628841" name="intfc" index="PrY4T" />
       </concept>
@@ -88,6 +92,17 @@
         </node>
       </node>
     </node>
+    <node concept="1TJgyj" id="5Ac1Q93IIrE" role="1TKVEi">
+      <property role="IQ2ns" value="6452540484739589866" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="explanation" />
+      <ref role="20lvS9" to="87nw:2dWzqxEB$Tx" resolve="Text" />
+    </node>
+    <node concept="1TJgyj" id="59fClQCJ6cX" role="1TKVEi">
+      <property role="IQ2ns" value="5931136657905181501" />
+      <property role="20kJfa" value="documentation" />
+      <ref role="20lvS9" node="2xfNjApoY99" resolve="IGSNDocument" />
+    </node>
   </node>
   <node concept="1TIwiD" id="1qrXfdH1Uhl">
     <property role="EcuMT" value="1629165016568013909" />
@@ -135,6 +150,12 @@
       <property role="TrG5h" value="max" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
+    <node concept="1TJgyj" id="5Ac1Q93IIdk" role="1TKVEi">
+      <property role="IQ2ns" value="6452540484739588948" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="explanation" />
+      <ref role="20lvS9" to="87nw:2dWzqxEB$Tx" resolve="Text" />
+    </node>
   </node>
   <node concept="1TIwiD" id="35$gPpxbZQ_">
     <property role="EcuMT" value="3559043643806317989" />
@@ -151,6 +172,15 @@
     <property role="TrG5h" value="OrEntity" />
     <property role="34LRSv" value="OR" />
     <ref role="1TJDcQ" node="7BYuSCFMYuE" resolve="PatternGoalStructureElementBase" />
+    <node concept="1irR5M" id="55oVyA0rRVM" role="rwd14">
+      <property role="2$rrk2" value="2" />
+      <node concept="1irPie" id="71RA3dHz6N3" role="1irR9h">
+        <property role="1irPi9" value="|" />
+        <node concept="3PKj8D" id="71RA3dHz6Nc" role="3PKjny">
+          <property role="3PKj8l" value="987654" />
+        </node>
+      </node>
+    </node>
   </node>
   <node concept="1TIwiD" id="7BYuSCFMYuE">
     <property role="EcuMT" value="8790599356044273578" />
@@ -158,6 +188,14 @@
     <property role="TrG5h" value="PatternGoalStructureElementBase" />
     <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" to="py52:3GRi4m$qS5k" resolve="GoalStructureElementBase" />
+  </node>
+  <node concept="PlHQZ" id="2xfNjApoY99">
+    <property role="EcuMT" value="2904765931947549257" />
+    <property role="3GE5qa" value="patterns" />
+    <property role="TrG5h" value="IGSNDocument" />
+    <node concept="PrWs8" id="2xfNjApoY9a" role="PrDN$">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
   </node>
 </model>
 

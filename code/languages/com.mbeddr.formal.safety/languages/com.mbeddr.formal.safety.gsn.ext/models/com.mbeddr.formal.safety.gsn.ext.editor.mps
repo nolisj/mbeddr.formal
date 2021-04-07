@@ -23,6 +23,7 @@
         <child id="1078153129734" name="inspectedCellModel" index="6VMZX" />
       </concept>
       <concept id="7418278005949660372" name="jetbrains.mps.lang.editor.structure.FontFamilyStyleClassItem" flags="ln" index="2biZxu" />
+      <concept id="1106270549637" name="jetbrains.mps.lang.editor.structure.CellLayout_Horizontal" flags="nn" index="2iRfu4" />
       <concept id="1106270571710" name="jetbrains.mps.lang.editor.structure.CellLayout_Vertical" flags="nn" index="2iRkQZ" />
       <concept id="1237303669825" name="jetbrains.mps.lang.editor.structure.CellLayout_Indent" flags="nn" index="l2Vlx" />
       <concept id="1142886221719" name="jetbrains.mps.lang.editor.structure.QueryFunction_NodeCondition" flags="in" index="pkWqt" />
@@ -241,6 +242,17 @@
         </node>
         <node concept="l2Vlx" id="WKGDODNpr_" role="2iSdaV" />
       </node>
+      <node concept="3F0ifn" id="25jECTPZ$Qd" role="3EZMnx" />
+      <node concept="3EZMnI" id="25jECTPZ$QP" role="3EZMnx">
+        <node concept="VPM3Z" id="25jECTPZ$QR" role="3F10Kt" />
+        <node concept="3F0ifn" id="25jECTPZ$QT" role="3EZMnx">
+          <property role="3F0ifm" value="Explanation:" />
+        </node>
+        <node concept="3F1sOY" id="25jECTPZ$Rq" role="3EZMnx">
+          <ref role="1NtTu8" to="py52:3GRi4m$qYoV" resolve="text" />
+        </node>
+        <node concept="2iRfu4" id="25jECTPZ$QU" role="2iSdaV" />
+      </node>
       <node concept="2iRkQZ" id="WKGDODNpog" role="2iSdaV" />
     </node>
   </node>
@@ -277,6 +289,34 @@
       <node concept="2iRkQZ" id="1qrXfdH2gEN" role="2iSdaV" />
       <node concept="PMmxH" id="1qrXfdH29G2" role="3EZMnx">
         <ref role="PMmxG" to="g35p:1qrXfdH1Y7r" resolve="GoalStructureDiagramEditorComponent" />
+      </node>
+    </node>
+    <node concept="3EZMnI" id="5Ac1Q93IIEY" role="6VMZX">
+      <node concept="2iRkQZ" id="5Ac1Q93IIEZ" role="2iSdaV" />
+      <node concept="3EZMnI" id="5Ac1Q93IIFC" role="3EZMnx">
+        <node concept="l2Vlx" id="5Ac1Q93IIFD" role="2iSdaV" />
+        <node concept="3F0ifn" id="5Ac1Q93IIFG" role="3EZMnx">
+          <property role="3F0ifm" value="Pattern Explanation:" />
+        </node>
+        <node concept="3F1sOY" id="5Ac1Q93IIFL" role="3EZMnx">
+          <ref role="1NtTu8" to="lbo2:5Ac1Q93IIrE" resolve="explanation" />
+        </node>
+      </node>
+      <node concept="3EZMnI" id="59fClQCI4SO" role="3EZMnx">
+        <node concept="VPM3Z" id="59fClQCI4SQ" role="3F10Kt" />
+        <node concept="3F0ifn" id="59fClQCI4SS" role="3EZMnx">
+          <property role="3F0ifm" value="Documentation:" />
+        </node>
+        <node concept="1iCGBv" id="59fClQCJ6kN" role="3EZMnx">
+          <ref role="1NtTu8" to="lbo2:59fClQCJ6cX" resolve="documentation" />
+          <node concept="1sVBvm" id="59fClQCJ6kP" role="1sWHZn">
+            <node concept="3F0A7n" id="59fClQCJ6l1" role="2wV5jI">
+              <property role="1Intyy" value="true" />
+              <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+            </node>
+          </node>
+        </node>
+        <node concept="l2Vlx" id="59fClQCI4ST" role="2iSdaV" />
       </node>
     </node>
   </node>
@@ -327,7 +367,7 @@
           <node concept="2iRkQZ" id="24PsEXF9yIb" role="2iSdaV" />
           <node concept="3F0ifn" id="2ccN23odQq9" role="3EZMnx">
             <property role="3F0ifm" value="supportedBy" />
-            <ref role="1k5W1q" to="xnej:71GfFl7qVvB" resolve="ConnectionStyle" />
+            <ref role="1k5W1q" to="g35p:71GfFl7qVvB" resolve="GSNConnectionTextStyle" />
           </node>
           <node concept="3EZMnI" id="24PsEXF9yIp" role="3EZMnx">
             <node concept="VPM3Z" id="24PsEXF9yIr" role="3F10Kt" />
@@ -375,6 +415,17 @@
         </node>
         <node concept="l2Vlx" id="24PsEXFa_kO" role="2iSdaV" />
       </node>
+      <node concept="3EZMnI" id="5xKN$GcBug$" role="3EZMnx">
+        <node concept="VPM3Z" id="5xKN$GcBugA" role="3F10Kt" />
+        <node concept="3F0ifn" id="5xKN$GcBugC" role="3EZMnx">
+          <property role="3F0ifm" value="explanation:" />
+        </node>
+        <node concept="3F1sOY" id="5Ac1Q93IIr_" role="3EZMnx">
+          <ref role="1NtTu8" to="lbo2:5Ac1Q93IIdk" resolve="explanation" />
+        </node>
+        <node concept="l2Vlx" id="5xKN$GcBugD" role="2iSdaV" />
+      </node>
+      <node concept="3F0ifn" id="5Ac1Q93K50b" role="3EZMnx" />
     </node>
   </node>
   <node concept="24kQdi" id="35$gPpxbZZo">
@@ -424,7 +475,7 @@
           <node concept="2iRkQZ" id="35$gPpxbZZI" role="2iSdaV" />
           <node concept="3F0ifn" id="35$gPpxbZZJ" role="3EZMnx">
             <property role="3F0ifm" value="inContextOf" />
-            <ref role="1k5W1q" to="xnej:71GfFl7qVvB" resolve="ConnectionStyle" />
+            <ref role="1k5W1q" to="g35p:71GfFl7qVvB" resolve="GSNConnectionTextStyle" />
           </node>
           <node concept="3EZMnI" id="35$gPpxbZZM" role="3EZMnx">
             <node concept="VPM3Z" id="35$gPpxbZZN" role="3F10Kt" />

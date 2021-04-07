@@ -37,6 +37,9 @@
       <concept id="4286195509388000609" name="com.mbeddr.formal.safety.stamp.structure.Controls" flags="ng" index="1XypPU" />
       <concept id="4286195509387940513" name="com.mbeddr.formal.safety.stamp.structure.Controller" flags="ng" index="1XyJaU">
         <child id="1941765291767695615" name="startingConnections" index="2I3o71" />
+        <child id="1941765291767694360" name="subControllers" index="2I3oOA" />
+        <child id="6289243512196426541" name="description" index="1t8wEa" />
+        <child id="6289243512196319726" name="responsabilities" index="1t8Ux9" />
       </concept>
       <concept id="4286195509387830511" name="com.mbeddr.formal.safety.stamp.structure.SafetyControlStructureConnectionBase" flags="ng" index="1X_0jO">
         <reference id="4185693763139125834" name="target" index="SrP07" />
@@ -127,35 +130,25 @@
       </concept>
     </language>
     <language id="a798113f-e2cd-4e21-a8e2-ca1903cb9c43" name="com.mbeddr.formal.safety.iso26262">
-      <concept id="2392944874760339599" name="com.mbeddr.formal.safety.iso26262.structure.ISO26262HazardousEvent" flags="ng" index="1a6Z8w">
-        <property id="2392944874760387687" name="controlability" index="1a6$V8" />
-        <property id="2392944874760387684" name="exposure" index="1a6$Vb" />
-        <property id="2392944874760387682" name="severity" index="1a6$Vd" />
+      <concept id="2392944874760339599" name="com.mbeddr.formal.safety.iso26262.structure.ISO26262Hazard" flags="ng" index="1a6Z8w">
+        <child id="5861696777036826313" name="operationalSituations" index="3h3uzw" />
+      </concept>
+      <concept id="5861696777036874339" name="com.mbeddr.formal.safety.iso26262.structure.OperationalSituationsCatalogue" flags="ng" index="3h3iLa">
+        <child id="5861696777036914244" name="operationalSituationDeclarations" index="3h3F1H" />
+      </concept>
+      <concept id="5861696777036874343" name="com.mbeddr.formal.safety.iso26262.structure.OperationalSituationDeclaration" flags="ng" index="3h3iLe">
+        <child id="5861696777036874344" name="description" index="3h3iL1" />
+      </concept>
+      <concept id="5861696777036826303" name="com.mbeddr.formal.safety.iso26262.structure.OperationalSituation" flags="ng" index="3h3uym">
+        <property id="5861696777036826305" name="exposure" index="3h3uzC" />
+        <property id="5861696777036826304" name="severity" index="3h3uzD" />
+        <property id="5861696777036826306" name="controlability" index="3h3uzF" />
+        <reference id="5861696777036874408" name="operationalSituationDeclaration" index="3h3iM1" />
       </concept>
     </language>
   </registry>
   <node concept="1X_0jQ" id="1L4MZBxVgwF">
     <property role="TrG5h" value="_010_airbag_controller_functional_control_structure" />
-    <node concept="1XyJaU" id="1L4MZBxVgwH" role="1X_0GB">
-      <property role="TrG5h" value="Airbag Controller" />
-      <node concept="Sq$B_" id="1L4MZBxVgEn" role="2I3o71">
-        <ref role="SrP08" node="1L4MZBxVgwH" resolve="Airbag Controller" />
-        <ref role="SrP07" node="1L4MZBxVgCS" resolve="Driver" />
-        <node concept="Sqzvu" id="1L4MZBxVgEo" role="Sq$B$">
-          <property role="TrG5h" value="Activation Status" />
-        </node>
-      </node>
-      <node concept="1XypPU" id="1L4MZBxVgFQ" role="2I3o71">
-        <ref role="SrP08" node="1L4MZBxVgwH" resolve="Airbag Controller" />
-        <ref role="SrP07" node="1L4MZBxVgDi" resolve="Airbag" />
-        <node concept="Sqzvu" id="1L4MZBxVgFR" role="Sq$B$">
-          <property role="TrG5h" value="Check Health" />
-        </node>
-        <node concept="Sqzvu" id="1L4MZBxVgH3" role="Sq$B$">
-          <property role="TrG5h" value="Deploy Airbag" />
-        </node>
-      </node>
-    </node>
     <node concept="37mRI7" id="1L4MZBxVgwL" role="lGtFl">
       <node concept="37mRIm" id="1L4MZBxVgwM" role="37mRID">
         <property role="37mO49" value="2036977205576009773" />
@@ -170,10 +163,10 @@
       <node concept="37mRIm" id="1L4MZBxVgCX" role="37mRID">
         <property role="37mO49" value="2036977205576010296" />
         <node concept="gqqVs" id="1L4MZBxVgCW" role="37mO4d">
-          <property role="gqqTZ" value="12.0" />
-          <property role="gqqTW" value="98.0" />
+          <property role="gqqTZ" value="50.0" />
+          <property role="gqqTW" value="82.0" />
           <property role="gqqTX" value="95.0" />
-          <property role="gqqTy" value="50.0" />
+          <property role="gqqTy" value="127.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
       </node>
@@ -204,8 +197,8 @@
             <property role="3ul5GH" value="label" />
             <node concept="3wpmZ1" id="1L4MZBxVgDN" role="3ul5Gz">
               <node concept="2VclrF" id="1L4MZBxVgDO" role="3wpmZR">
-                <property role="2Vclpx" value="123.25" />
-                <property role="2Vclpz" value="78.5" />
+                <property role="2Vclpx" value="172.25" />
+                <property role="2Vclpz" value="81.5" />
               </node>
               <node concept="2VclrF" id="1L4MZBxVgDP" role="3wpmZP">
                 <property role="2Vclpx" value="0.0" />
@@ -214,8 +207,16 @@
             </node>
           </node>
           <node concept="2VclrF" id="1L4MZBxVgFh" role="2Vcluh">
-            <property role="2Vclpx" value="153.0" />
-            <property role="2Vclpz" value="106.0" />
+            <property role="2Vclpx" value="219.9989135535771" />
+            <property role="2Vclpz" value="115.5515575778789" />
+          </node>
+          <node concept="2VclrF" id="5cnt3YR8YaN" role="2Vcluh">
+            <property role="2Vclpx" value="284.1216216216216" />
+            <property role="2Vclpz" value="115.20270270270271" />
+          </node>
+          <node concept="2VclrF" id="5cnt3YR8Yb8" role="2Vcluh">
+            <property role="2Vclpx" value="308.5956355084795" />
+            <property role="2Vclpz" value="115.20270270270271" />
           </node>
         </node>
       </node>
@@ -307,6 +308,16 @@
           </node>
         </node>
       </node>
+      <node concept="37mRIm" id="5cnt3YR8Y0r" role="37mRID">
+        <property role="37mO49" value="5987382046616707063" />
+        <node concept="gqqVs" id="5cnt3YR8Y0q" role="37mO4d">
+          <property role="gqqTZ" value="260.0" />
+          <property role="gqqTW" value="50.0" />
+          <property role="gqqTX" value="486.0" />
+          <property role="gqqTy" value="279.0" />
+          <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
+        </node>
+      </node>
     </node>
     <node concept="1XyJaU" id="1L4MZBxVgCS" role="1X_0GB">
       <property role="TrG5h" value="Driver" />
@@ -320,30 +331,212 @@
           <property role="TrG5h" value="Activate" />
         </node>
       </node>
-    </node>
-    <node concept="1XyJaU" id="1L4MZBxVgCY" role="1X_0GB">
-      <property role="TrG5h" value="Sensors" />
-      <node concept="1XypPU" id="1L4MZBxVgID" role="2I3o71">
-        <ref role="SrP08" node="1L4MZBxVgCY" resolve="Sensors" />
-        <ref role="SrP07" node="1L4MZBxVgwH" resolve="Airbag Controller" />
-        <node concept="Sqzvu" id="1L4MZBxVgIE" role="Sq$B$">
-          <property role="TrG5h" value="Crash Detected" />
+      <node concept="19SGf9" id="5t7SqsaqGtm" role="1t8wEa">
+        <node concept="19SUe$" id="5t7SqsaqGtn" role="19SJt6">
+          <property role="19SUeA" value="The human driver who controls the vehicle" />
         </node>
-        <node concept="Sqzvu" id="7Jm8RM1zonQ" role="Sq$B$">
-          <property role="TrG5h" value="Sensors Health" />
+      </node>
+      <node concept="19SGf9" id="5t7SqsaqGtr" role="1t8Ux9">
+        <node concept="19SUe$" id="5t7SqsaqGts" role="19SJt6">
+          <property role="19SUeA" value="R1: Activate the airbag system&#10;R2: Deactivate the airbag system" />
         </node>
       </node>
     </node>
-    <node concept="1XyJaU" id="1L4MZBxVgDi" role="1X_0GB">
-      <property role="TrG5h" value="Airbag" />
-      <node concept="Sq$B_" id="1L4MZBxVgH7" role="2I3o71">
-        <ref role="SrP08" node="1L4MZBxVgDi" resolve="Airbag" />
-        <ref role="SrP07" node="1L4MZBxVgwH" resolve="Airbag Controller" />
-        <node concept="Sqzvu" id="1L4MZBxVgKl" role="Sq$B$">
-          <property role="TrG5h" value="Airbag Health Status" />
+    <node concept="1XyJaU" id="5cnt3YR8XZR" role="1X_0GB">
+      <property role="TrG5h" value="Vehicle" />
+      <node concept="19SGf9" id="5cnt3YR8Y1g" role="1t8Ux9">
+        <node concept="19SUe$" id="5cnt3YR8Y1h" role="19SJt6" />
+      </node>
+      <node concept="19SGf9" id="5cnt3YR8Y1b" role="1t8wEa">
+        <node concept="19SUe$" id="5cnt3YR8Y1c" role="19SJt6">
+          <property role="19SUeA" value="The vehicle containing the airbag system." />
         </node>
-        <node concept="Sqzvu" id="1L4MZBxVgH8" role="Sq$B$">
-          <property role="TrG5h" value="Airbag Deployed" />
+      </node>
+      <node concept="1XyJaU" id="1L4MZBxVgwH" role="2I3oOA">
+        <property role="TrG5h" value="Airbag Controller" />
+        <node concept="19SGf9" id="5t7SqsaqGtW" role="1t8wEa">
+          <node concept="19SUe$" id="5t7SqsaqGtX" role="19SJt6">
+            <property role="19SUeA" value="Inflation module, deciding when the airbag shall be inflated." />
+          </node>
+        </node>
+        <node concept="19SGf9" id="5t7SqsaqGuF" role="1t8Ux9">
+          <node concept="19SUe$" id="5t7SqsaqGuG" role="19SJt6">
+            <property role="19SUeA" value="R1: Inflates airbag when a crash occurs" />
+          </node>
+        </node>
+        <node concept="Sq$B_" id="1L4MZBxVgEn" role="2I3o71">
+          <ref role="SrP08" node="1L4MZBxVgwH" resolve="Airbag Controller" />
+          <ref role="SrP07" node="1L4MZBxVgCS" resolve="Driver" />
+          <node concept="Sqzvu" id="1L4MZBxVgEo" role="Sq$B$">
+            <property role="TrG5h" value="Activation Status" />
+          </node>
+        </node>
+        <node concept="1XypPU" id="1L4MZBxVgFQ" role="2I3o71">
+          <ref role="SrP08" node="1L4MZBxVgwH" resolve="Airbag Controller" />
+          <ref role="SrP07" node="1L4MZBxVgDi" resolve="Airbag" />
+          <node concept="Sqzvu" id="1L4MZBxVgFR" role="Sq$B$">
+            <property role="TrG5h" value="Check Health" />
+          </node>
+          <node concept="Sqzvu" id="1L4MZBxVgH3" role="Sq$B$">
+            <property role="TrG5h" value="Deploy Airbag" />
+          </node>
+        </node>
+      </node>
+      <node concept="37mRI7" id="5cnt3YR8Y2b" role="lGtFl">
+        <node concept="37mRIm" id="5cnt3YR8Y2c" role="37mRID">
+          <property role="37mO49" value="2036977205576009773" />
+          <node concept="gqqVs" id="5cnt3YR8Y2a" role="37mO4d">
+            <property role="gqqTZ" value="46.0" />
+            <property role="gqqTW" value="23.0" />
+            <property role="gqqTX" value="394.0" />
+            <property role="gqqTy" value="85.0" />
+            <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
+          </node>
+        </node>
+        <node concept="37mRIm" id="5cnt3YR8Y2e" role="37mRID">
+          <property role="37mO49" value="2036977205576010391" />
+          <node concept="2VclpC" id="5cnt3YR8Y2d" role="37mO4d">
+            <node concept="3ul5H1" id="5cnt3YR8Y2f" role="3ul5Gx">
+              <property role="3ul5GH" value="label" />
+              <node concept="3wpmZ1" id="5cnt3YR8Y2g" role="3ul5Gz">
+                <node concept="2VclrF" id="5cnt3YR8Y2h" role="3wpmZR">
+                  <property role="2Vclpx" value="153.3479381443299" />
+                  <property role="2Vclpz" value="189.1262886597938" />
+                </node>
+                <node concept="2VclrF" id="5cnt3YR8Y2i" role="3wpmZP">
+                  <property role="2Vclpx" value="0.0" />
+                  <property role="2Vclpz" value="0.0" />
+                </node>
+              </node>
+            </node>
+            <node concept="2VclrF" id="5cnt3YR8Y7V" role="2Vcluh">
+              <property role="2Vclpx" value="44.0" />
+              <property role="2Vclpz" value="98.0" />
+            </node>
+            <node concept="2VclrF" id="5cnt3YR8Yco" role="2Vcluh">
+              <property role="2Vclpx" value="-47.62769039681267" />
+              <property role="2Vclpz" value="98.0" />
+            </node>
+          </node>
+        </node>
+        <node concept="37mRIm" id="5cnt3YR8Y2k" role="37mRID">
+          <property role="37mO49" value="2036977205576010486" />
+          <node concept="2VclpC" id="5cnt3YR8Y2j" role="37mO4d">
+            <node concept="3ul5H1" id="5cnt3YR8Y2l" role="3ul5Gx">
+              <property role="3ul5GH" value="label" />
+              <node concept="3wpmZ1" id="5cnt3YR8Y2m" role="3ul5Gz">
+                <node concept="2VclrF" id="5cnt3YR8Y2n" role="3wpmZR">
+                  <property role="2Vclpx" value="157.659793814433" />
+                  <property role="2Vclpz" value="131.75" />
+                </node>
+                <node concept="2VclrF" id="5cnt3YR8Y2o" role="3wpmZP">
+                  <property role="2Vclpx" value="0.0" />
+                  <property role="2Vclpz" value="0.0" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="37mRIm" id="5cnt3YR8Y4v" role="37mRID">
+          <property role="37mO49" value="2036977205576010302" />
+          <node concept="gqqVs" id="5cnt3YR8Y4u" role="37mO4d">
+            <property role="gqqTZ" value="71.0" />
+            <property role="gqqTW" value="189.0" />
+            <property role="gqqTX" value="105.0" />
+            <property role="gqqTy" value="46.0" />
+            <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
+          </node>
+        </node>
+        <node concept="37mRIm" id="5cnt3YR8Y4x" role="37mRID">
+          <property role="37mO49" value="2036977205576010665" />
+          <node concept="2VclpC" id="5cnt3YR8Y4w" role="37mO4d">
+            <node concept="3ul5H1" id="5cnt3YR8Y4y" role="3ul5Gx">
+              <property role="3ul5GH" value="label" />
+              <node concept="3wpmZ1" id="5cnt3YR8Y4z" role="3ul5Gz">
+                <node concept="2VclrF" id="5cnt3YR8Y4$" role="3wpmZR">
+                  <property role="2Vclpx" value="9.0" />
+                  <property role="2Vclpz" value="131.0" />
+                </node>
+                <node concept="2VclrF" id="5cnt3YR8Y4_" role="3wpmZP">
+                  <property role="2Vclpx" value="0.0" />
+                  <property role="2Vclpz" value="0.0" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="37mRIm" id="5cnt3YR8Y6_" role="37mRID">
+          <property role="37mO49" value="2036977205576010322" />
+          <node concept="gqqVs" id="5cnt3YR8Y6$" role="37mO4d">
+            <property role="gqqTZ" value="197.0" />
+            <property role="gqqTW" value="189.0" />
+            <property role="gqqTX" value="185.0" />
+            <property role="gqqTy" value="46.0" />
+            <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
+          </node>
+        </node>
+        <node concept="37mRIm" id="5cnt3YR8Y6B" role="37mRID">
+          <property role="37mO49" value="2036977205576010567" />
+          <node concept="2VclpC" id="5cnt3YR8Y6A" role="37mO4d">
+            <node concept="3ul5H1" id="5cnt3YR8Y6C" role="3ul5Gx">
+              <property role="3ul5GH" value="label" />
+              <node concept="3wpmZ1" id="5cnt3YR8Y6D" role="3ul5Gz">
+                <node concept="2VclrF" id="5cnt3YR8Y6E" role="3wpmZR">
+                  <property role="2Vclpx" value="337.09278350515467" />
+                  <property role="2Vclpz" value="136.34536082474227" />
+                </node>
+                <node concept="2VclrF" id="5cnt3YR8Y6F" role="3wpmZP">
+                  <property role="2Vclpx" value="0.0" />
+                  <property role="2Vclpz" value="0.0" />
+                </node>
+              </node>
+            </node>
+            <node concept="2VclrF" id="5cnt3YR8Y9u" role="2Vcluh">
+              <property role="2Vclpx" value="321.0" />
+              <property role="2Vclpz" value="150.0" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1XyJaU" id="1L4MZBxVgCY" role="2I3oOA">
+        <property role="TrG5h" value="Sensors" />
+        <node concept="19SGf9" id="5t7SqsaqGt_" role="1t8wEa">
+          <node concept="19SUe$" id="5t7SqsaqGtA" role="19SJt6">
+            <property role="19SUeA" value="The impact sensor" />
+          </node>
+        </node>
+        <node concept="19SGf9" id="5t7SqsaqGuA" role="1t8Ux9">
+          <node concept="19SUe$" id="5t7SqsaqGuB" role="19SJt6">
+            <property role="19SUeA" value="R1: Send a message to the Airbag Controller when it detects a vehicle crash&#10;R2: Send a message to the Airbag Controller when it detects a sensor fault" />
+          </node>
+        </node>
+        <node concept="1XypPU" id="1L4MZBxVgID" role="2I3o71">
+          <ref role="SrP08" node="1L4MZBxVgCY" resolve="Sensors" />
+          <ref role="SrP07" node="1L4MZBxVgwH" resolve="Airbag Controller" />
+          <node concept="Sqzvu" id="1L4MZBxVgIE" role="Sq$B$">
+            <property role="TrG5h" value="Crash Detected" />
+          </node>
+          <node concept="Sqzvu" id="7Jm8RM1zonQ" role="Sq$B$">
+            <property role="TrG5h" value="Sensors Health" />
+          </node>
+        </node>
+      </node>
+      <node concept="1XyJaU" id="1L4MZBxVgDi" role="2I3oOA">
+        <property role="TrG5h" value="Airbag" />
+        <node concept="19SGf9" id="5t7SqsaqGtw" role="1t8wEa">
+          <node concept="19SUe$" id="5t7SqsaqGtx" role="19SJt6">
+            <property role="19SUeA" value="The airbag device." />
+          </node>
+        </node>
+        <node concept="Sq$B_" id="1L4MZBxVgH7" role="2I3o71">
+          <ref role="SrP08" node="1L4MZBxVgDi" resolve="Airbag" />
+          <ref role="SrP07" node="1L4MZBxVgwH" resolve="Airbag Controller" />
+          <node concept="Sqzvu" id="1L4MZBxVgKl" role="Sq$B$">
+            <property role="TrG5h" value="Airbag Health Status" />
+          </node>
+          <node concept="Sqzvu" id="1L4MZBxVgH8" role="Sq$B$">
+            <property role="TrG5h" value="Airbag Deployed" />
+          </node>
         </node>
       </node>
     </node>
@@ -495,40 +688,55 @@
     <node concept="1a6Z8w" id="7L33HENb9vA" role="8gIbH">
       <property role="0lsPA" value="H01" />
       <property role="TrG5h" value="airbag does not deploy" />
-      <property role="1a6$Vd" value="24PsEXFbNKU/S3" />
-      <property role="1a6$Vb" value="24PsEXFbNL5/E2" />
-      <property role="1a6$V8" value="24PsEXFbNLt/C3" />
       <node concept="3Zv_sa" id="7Jm8RM1zooT" role="3Zv_sA">
         <ref role="3Zv_sb" node="7Jm8RM1zooO" resolve="driver severe injury which requires hospitalization" />
       </node>
       <node concept="3Zv_sa" id="7Jm8RM1zooY" role="3Zv_sA">
         <ref role="3Zv_sb" node="7Jm8RM1zooH" resolve="passenger severe injury which requires hospitalization" />
       </node>
+      <node concept="3h3uym" id="55oVyA0mGR1" role="3h3uzw">
+        <property role="3h3uzF" value="24PsEXFbNLt/C3" />
+        <property role="3h3uzC" value="24PsEXFbNL9/E3" />
+        <property role="3h3uzD" value="24PsEXFbNKU/S3" />
+        <ref role="3h3iM1" node="1LvcKAYEWJP" resolve="OS01" />
+      </node>
+      <node concept="3h3uym" id="1LvcKAYEWK8" role="3h3uzw">
+        <property role="3h3uzD" value="24PsEXFbNKN/S1" />
+        <property role="3h3uzC" value="24PsEXFbNLe/E4" />
+        <property role="3h3uzF" value="24PsEXFbNLp/C2" />
+        <ref role="3h3iM1" node="1LvcKAYEWJZ" resolve="OS02" />
+      </node>
     </node>
     <node concept="1a6Z8w" id="7L33HENb9vN" role="8gIbH">
       <property role="0lsPA" value="H02" />
       <property role="TrG5h" value="airbag deploys unintentionally" />
-      <property role="1a6$V8" value="24PsEXFbNLt/C3" />
-      <property role="1a6$Vb" value="24PsEXFbNL9/E3" />
-      <property role="1a6$Vd" value="24PsEXFbNKQ/S2" />
       <node concept="3Zv_sa" id="7Jm8RM1zop2" role="3Zv_sA">
         <ref role="3Zv_sb" node="7Jm8RM1zooO" resolve="driver severe injury which requires hospitalization" />
       </node>
       <node concept="3Zv_sa" id="7Jm8RM1zopl" role="3Zv_sA">
         <ref role="3Zv_sb" node="7Jm8RM1zooH" resolve="passenger severe injury which requires hospitalization" />
       </node>
+      <node concept="3h3uym" id="55oVyA0mGR2" role="3h3uzw">
+        <property role="3h3uzF" value="24PsEXFbNLt/C3" />
+        <property role="3h3uzC" value="24PsEXFbNL9/E3" />
+        <property role="3h3uzD" value="24PsEXFbNKQ/S2" />
+        <ref role="3h3iM1" node="1LvcKAYEWJP" resolve="OS01" />
+      </node>
     </node>
     <node concept="1a6Z8w" id="7L33HENb9wH" role="8gIbH">
       <property role="0lsPA" value="H03" />
       <property role="TrG5h" value="airbag deploys too soon or late" />
-      <property role="1a6$Vd" value="24PsEXFbNKN/S1" />
-      <property role="1a6$Vb" value="24PsEXFbNL5/E2" />
-      <property role="1a6$V8" value="24PsEXFbNLt/C3" />
       <node concept="3Zv_sa" id="7Jm8RM1zopp" role="3Zv_sA">
         <ref role="3Zv_sb" node="7Jm8RM1zooN" resolve="driver light injury which does not require hospitalization" />
       </node>
       <node concept="3Zv_sa" id="7Jm8RM1zopu" role="3Zv_sA">
         <ref role="3Zv_sb" node="7Jm8RM1zooJ" resolve="passenger light injury which does not require hospitalization" />
+      </node>
+      <node concept="3h3uym" id="55oVyA0mGR3" role="3h3uzw">
+        <property role="3h3uzF" value="24PsEXFbNLt/C3" />
+        <property role="3h3uzC" value="24PsEXFbNL9/E3" />
+        <property role="3h3uzD" value="24PsEXFbNKQ/S2" />
+        <ref role="3h3iM1" node="1LvcKAYEWJP" resolve="OS01" />
       </node>
     </node>
   </node>
@@ -568,6 +776,25 @@
     <node concept="2HxQMU" id="7Jm8RM1zooN" role="2HxQMj">
       <property role="2HxQM_" value="DRIVER_LIGHT_INJ" />
       <property role="TrG5h" value="driver light injury which does not require hospitalization" />
+    </node>
+  </node>
+  <node concept="3h3iLa" id="1LvcKAYEWJH">
+    <property role="TrG5h" value="_110_operational_situations" />
+    <node concept="3h3iLe" id="1LvcKAYEWJP" role="3h3F1H">
+      <property role="TrG5h" value="OS01" />
+      <node concept="19SGf9" id="1LvcKAYEWJQ" role="3h3iL1">
+        <node concept="19SUe$" id="1LvcKAYEWJR" role="19SJt6">
+          <property role="19SUeA" value="driving on highway" />
+        </node>
+      </node>
+    </node>
+    <node concept="3h3iLe" id="1LvcKAYEWJZ" role="3h3F1H">
+      <property role="TrG5h" value="OS02" />
+      <node concept="19SGf9" id="1LvcKAYEWK0" role="3h3iL1">
+        <node concept="19SUe$" id="1LvcKAYEWK1" role="19SJt6">
+          <property role="19SUeA" value="driving in city" />
+        </node>
+      </node>
     </node>
   </node>
 </model>
